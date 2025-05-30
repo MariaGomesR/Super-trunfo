@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sailor  Moon ☪︎ Magic Cards</title>
+    <link rel="stylesheet" href="/static/styles/inicio.css">
+    <link rel="shortcut icon" href="/static/assets/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="snowfall">
+        <div class="flocos"></div>
+        <div class="flocos"></div>
+        <div class="flocos"></div>
+        <div class="flocos"></div>
+        <div class="flocos"></div>
+        <div class="flocos"></div>
+        <div class="flocos"></div>
+        <div class="flocos"></div>
+        <div class="flocos"></div>
+        <div class="flocos"></div>
+        <div class="flocos"></div>
+        <div class="flocos"></div>
+        <div class="flocos"></div>
+        <div class="flocos"></div>
+        <div class="flocos"></div>
+        <div class="flocos"></div>
+        <div class="flocos"></div>
+        <div class="flocos"></div>
+        <div class="flocos"></div>
+        <div class="flocos"></div>
+    </div>
+
+    <div class="borda">
+        <div class="bloco_principal">
+            <h1>セーラームーン</h1>
+
+            <div class="sailor">
+                <img src="/static/assets/sailormoon.png" width="595px"  alt="">
+            </div>
+
+            <div class="estrelas">
+                <img src="/static/assets/estrelas.png" width="650px" alt="">
+            </div>
+
+            <div class="titulo_img">
+                <img src="/static/assets/titulo.png" width="480px" alt="">
+            </div>
+
+            <p>Magic Cards</p>
+
+        </div>
+
+        <button class="play-button" onclick="window.location.href='/play'">▶</button>
+
+        <button class="sobre" onclick="window.location.href='/sobre'">
+            <img src="/static/assets/ham.png" alt="#">
+        </button>
+
+        <div class="musica">
+            <audio id="musica" src="/static/assets/YuYu Hakusho - Romantic! (TikTok Version).mp3" autoplay loop></audio>
+            <img id="playPauseImg" src="/static/assets/music_pause.png" alt="Tocar Música" onclick="tocarOuPausar()">
+        </div>
+
+    </div>
+
+    <script>
+        const audio = document.getElementById("musica");
+        const botaoImg = document.getElementById("playPauseImg");
+
+        // Verifica se existe tempo salvo
+        const tempoSalvo = localStorage.getItem("musicaTempo");
+        if (tempoSalvo) {
+            audio.currentTime = parseFloat(tempoSalvo);
+        }
+
+        // Tenta iniciar a música sem som para evitar bloqueio do navegador
+        document.addEventListener("DOMContentLoaded", () => {
+            if (localStorage.getItem("musicaTocando") === "true") {
+                audio.volume = 1; // Começa sem som para evitar bloqueio
+                audio.play().then(() => {
+                    setTimeout(() => {
+                        audio.volume = 1; // Aumenta o volume depois
+                    }, 1000);
+                    botaoImg.src = "/static/assets/music.png"; // Atualiza ícone
+                }).catch(error => {
+                    console.warn("Autoplay bloqueado, clique no botão para tocar.");
+                });
+            }
+        });
+
+function tocarOuPausar() {
+    if (audio.paused) {
+        audio.play();
+        botaoImg.src = "/static/assets/music.png"; // Muda para pause
+        localStorage.setItem("musicaTocando", "true");
+    } else {
+        audio.pause();
+        botaoImg.src = "/static/assets/music_pause.png"; // Muda para play
+        localStorage.setItem("musicaTocando", "false");
+    }
+}
+
+// Salva o tempo da música antes de sair da página
+window.addEventListener("beforeunload", () => {
+    localStorage.setItem("musicaTempo", audio.currentTime);
+});
+
+    </script>
+
+</body>
+</html>

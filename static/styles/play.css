@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap');
+
+:root{
+    --fonte-darker-grostesque: 'Darker Grotesque'
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #47498e;
+    overflow: hidden;
+}
+
+
+.mesa{
+    text-align: center;
+    margin-top: -8px;
+}
+
+.x{
+    position: absolute;
+    margin-top: -405px;
+    margin-left: 735px;
+}
+
+.shaw1{
+    position: absolute;
+    margin-top: -500px;
+    margin-left: 520px;
+    transition: transform 0.3s ease-in-out;
+}
+.shaw1:hover {
+    transform: scale(1.1);
+}
+
+
+.shaw2{
+    position: absolute;
+    margin-top: -500px;
+    margin-left: 840px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.shaw2:hover {
+    transform: scale(1.1);
+}
+
+
+button {
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.sortear{
+    position: absolute;
+    margin-top: -600px;
+    margin-left: 290px;
+    background: transparent;
+    border: 2px solid #9770fa;
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-family: var(--fonte-darker-grostesque);
+    font-weight: 500;
+    line-height: 10px;
+    font-size: 16px;
+    color: #47498e;
+    transition: 0.5s;
+}
+
+.sortear:hover{
+    background-color: #9770fa;
+    color:white
+}
+
+
+/* Cartas do computador no topo */
+.cartas-computador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -800px;
+    gap: 10px; /* Espaçamento entre as cartas */
+}
+
+/* Cartas do jogador no final */
+.cartas-jogador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -200px;
+    gap: 10px; /* Espaçamento entre as cartas */
+}
+
+/* Estilo individual para cada carta */
+.carta {
+    background-color: white;
+    border: 1px solid #47498e;
+    padding: 12px;
+    font-family: var(--fonte-darker-grostesque);
+    font-size: 10px;
+    text-align: center;
+    border-radius: 7px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+
+.carta img{
+    width: 90px; /* Ajuste conforme necessário */
+    height: 150px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.carta:hover{
+    transform: translateY(-50px) scale(1.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+ .atributos button{
+    margin-left: 400px;
+    display: grid;
+    gap: 20px;
+    margin-top: 40px;
+    background: transparent;
+    border: 2px solid #9770fa;
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-family: var(--fonte-darker-grostesque);
+    font-weight: 500;
+    line-height: 10px;
+    font-size: 16px;
+    color: #47498e;
+    transition: 0.5s; 
+}
+
+.atributos button:hover{
+    cursor: pointer;
+    background-color: #9770fa;
+    color:white
+}
+
+.atributos{
+    position: relative;
+    margin-top: 140px;
+}
+
+.resultado{
+    position: relative;
+    font-family: var(--fonte-darker-grostesque);
+    font-size: 25px;
+    left: 680px;
+    margin-top: -250px;
+}
+
+.resetar{
+    position: fixed;
+    left: 295px;
+    top: 190px;
+    display: grid;
+    gap: 20px;
+    background: transparent;
+    border: 2px solid #9770fa;
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-family: var(--fonte-darker-grostesque);
+    font-weight: 500;
+    line-height: 10px;
+    font-size: 16px;
+    color: #47498e;
+    transition: 0.5s; 
+}
+
+.resetar:hover{
+    background-color: #9770fa;
+    color:white
+}
+
+.carta-joga{
+    width: 140px;
+    height: auto;
+}
+
+.carta-pc{
+    width: 140px;
+    height: auto;
+}
+
+p{
+    font-family: var(--fonte-darker-grostesque);
+    font-size: 20px;
+    color: #47498e;
+    text-align: center;
+}
+
+.musica{
+    position: absolute;
+    background-color: transparent;
+    border-color: transparent;
+    margin-top: 100px;
+    margin-left: 50px;
+    transition: 0.5s;
+
+}
+
+.musica:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}

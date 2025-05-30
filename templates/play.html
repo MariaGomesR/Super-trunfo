@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play</title>
+    <link rel="stylesheet" href="/static/styles/play.css">
+</head>
+<body>
+    
+    <div class="musica">
+        <audio id="musica" src="/static/assets/YuYu Hakusho - Romantic! (TikTok Version).mp3" autoplay loop></audio>
+        <img id="playPauseImg" src="/static/assets/music_pause.png" alt="Tocar Música" onclick="tocarOuPausar()">
+    </div>
+
+    <script>
+        const audio = document.getElementById("musica");
+        const botaoImg = document.getElementById("playPauseImg");
+
+        // Verifica se existe tempo salvo
+        const tempoSalvo = localStorage.getItem("musicaTempo");
+        if (tempoSalvo) {
+            audio.currentTime = parseFloat(tempoSalvo);
+        }
+
+        // Tenta iniciar a música sem som para evitar bloqueio do navegador
+        document.addEventListener("DOMContentLoaded", () => {
+            if (localStorage.getItem("musicaTocando") === "true") {
+                audio.volume = 0; // Começa sem som para evitar bloqueio
+                audio.play().then(() => {
+                    setTimeout(() => {
+                        audio.volume = 1; // Aumenta o volume depois
+                    }, 1000);
+                    botaoImg.src = "/static/assets/music.png"; // Atualiza ícone
+                }).catch(error => {
+                    console.warn("Autoplay bloqueado, clique no botão para tocar.");
+                });
+            }
+        });
+
+    function tocarOuPausar() {
+    if (audio.paused) {
+        audio.play();
+        botaoImg.src = "/static/assets/music.png"; // Muda para pause
+        localStorage.setItem("musicaTocando", "true");
+    } else {
+        audio.pause();
+        botaoImg.src = "/static/assets/music_pause.png"; // Muda para play
+        localStorage.setItem("musicaTocando", "false");
+    }
+    }
+
+    // Salva o tempo da música antes de sair da página
+    window.addEventListener("beforeunload", () => {
+    localStorage.setItem("musicaTempo", audio.currentTime);
+    });
+
+    </script>
+
+
+    <div class="mesa">
+        <img src="/static/assets/mesa.png" alt="mesa" width="1100px">
+    </div>
+
+    <div class="x">
+        <img src="/static/assets/x.png" alt="" width="50px">
+    </div>
+
+
+    <!-- Espaço para exibir a acarta do jogador -->
+    <div class="shaw1">
+        <img src="/static/assets/shadow1.png" alt="" width="150px">
+    </div>
+
+    <!-- Espaço para exibir a carta do computador -->
+    <div class="shaw2">
+        <img src="/static/assets/shadow2.png" alt="" width="155px">
+    </div>
+
+    <!-- Botão para sortear cartas -->
+    <button class="sortear" onclick="sortearCartas()">Sortear Cartas</button>
+
+    <!-- Espaço onde aparecem as cartas do jogador -->
+    <div class="cartas-jogador"></div>
+
+    <!-- Espaço onde aparecem as cartas do computador -->
+    <div class="cartas-computador"></div>
+
+    <!-- Espaço para exibir os botões de atributos (bolinhas) -->
+    <div class="atributos"></div>
+
+    <!-- Espaço para exibir o resultado do combate -->
+    <div class="resultado"></div>
+
+    <button class="resetar" onclick="resetarJogo()">Resetar Jogo</button>
+
+    <script src="/static/script/trunfo.js"></script>
+</body>
+</html>

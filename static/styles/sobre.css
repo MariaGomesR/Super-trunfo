@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap');
+
+:root{
+    --fonte-1: 'Darker Grotesque';
+    --fonte-2: 'Zen Antique'
+}
+
+@font-face {
+    font-family: 'Theseasons';
+    src: url('/static/fonts/Fontspring-DEMO-theseasons-reg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Theseasons';
+    src: url('/static/fonts/Fontspring-DEMO-theseasons-bd.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Theseasons';
+    src: url('/static/fonts/Fontspring-DEMO-theseasons-it.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Theseasons';
+    src: url('/static/fonts/Fontspring-DEMO-theseasons-bdit.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.som{
+    background-color: transparent;
+    border-color: transparent;
+    position: absolute ;
+    margin-top: -60px;
+    margin-left: 10px;
+    transition: 0.5s ease-in-out;
+}
+
+.cabecalho{
+    font-family: var(--fonte-1);
+    font-size: 15px;
+    color: #47498e;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logo{
+    width: 200px;
+}
+
+.como_jogar h1{
+    font-family: var(--fonte-1);
+    font-size: 30px;
+    color: #47498e;
+    margin-left: 200px;
+    margin-top: 20px;
+    animation: slide-up 2s ease-in-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+
+}
+
+.como_jogar h2{
+    font-family: var(--fonte-1);
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 500;
+    width: 300px;
+    color: #47498e;
+    margin-left: 200px;
+    margin-top: 20px;
+    animation: slide-up 2s ease-in-out forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+.tutorial{
+    margin-top: -300px;
+    margin-left: 700px;
+    width: 700px;
+}
+
+.como_jogar img, .um, .dois, .tres, .quatro{
+    animation-delay: 1s;
+    animation: slide-up 2s ease-in-out forwards;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(50px) scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.um{
+    font-family: var(--fonte-1);
+    font-size: 22px;
+    width: 300px;
+    line-height: 20px;
+    color: #47498e;
+    position: absolute;
+    margin-left: 565px;
+    margin-top: -200px;
+    z-index: 5;
+}
+
+.dois{
+    font-family: var(--fonte-1);
+    font-size: 22px;
+    color: #47498e;
+    position: absolute;
+    margin-left: 1035px;
+    margin-top: 100px;
+    z-index: 5;
+
+}
+
+.tres{
+    font-family: var(--fonte-1);
+    font-size: 20px;
+    text-align: center;
+    line-height: 20px;
+    width: 160px;
+    background-color: #47498e;
+    padding: 5px;
+    color: white;
+    position: absolute;
+    margin-left: 760px;
+    margin-top: -185px;
+    z-index: 5;
+
+}
+
+.quatro{
+    font-family: var(--fonte-1);
+    font-size: 20px;
+    text-align: center;
+    width: 160px;
+    background-color: #47498e;
+    padding: 5px;
+    color: white;
+    position: absolute;
+    margin-left: 1260px;
+    margin-top: -180px;
+    z-index: 5;
+
+}
+
+.cabecalho_carta{
+    text-align: center;
+    animation: slide-up 2s ease-in-out forwards;
+    animation-delay: 2s;
+
+    animation-timeline: view();
+    animation-range: entry 10% cover 70%;
+}
+
+.cabecalho_carta img{
+    width: 80px;
+    margin-top: 70px;
+    margin-right: 290px;
+}
+
+.cabecalho_carta h1{
+    font-family: var(--fonte-1);
+    font-size: 40px;
+    color: #47498e;
+    margin-left: 120px;
+    margin-top: -70px;
+}
+
+.cabecalho_carta h2{
+    font-family: var(--fonte-1);
+    font-size: 24px;
+    color: #47498e;
+    line-height: 25px;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+.carta img{
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 500px;
+    margin-top: 60px;
+}
+
+.cinco{
+    font-family: var(--fonte-1);
+    font-size: 26px;    color: #47498e;
+    position: absolute;
+    margin-left: 860px;
+    margin-top: 47px;
+}
+
+.seis{
+    font-family: var(--fonte-1);
+    font-size: 26px;
+    line-height: 20px;
+    color: #47498e;
+    position: absolute;
+    margin-left: 255px;
+    margin-top: 176px;
+}
+
+.carta ul{
+    font-family: var(--fonte-1);
+    font-size: 24px;
+    line-height: 25px;
+    font-weight: 500;
+    color: #47498e;
+    position: absolute;
+    list-style-type: disc;
+    margin-left: 300px;
+    margin-top: 205px;
+}
+
+.carta h2{
+    font-family: var(--fonte-1);
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    width: 290px;
+    color: #47498e;
+    position: absolute;
+
+    margin-left: 255px;
+    margin-top: 320px;
+}
+
+.sete{
+    font-family: var(--fonte-1);
+    font-size: 26px;    color: #47498e;
+    position: absolute;
+    margin-left: 910px;
+    margin-top: 116px;
+}
+
+.carta h3{
+    font-family: var(--fonte-1);
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    width: 400px;
+    color: #47498e;
+    position: absolute;
+
+    margin-left: 910px;
+    margin-top: 170px;
+}
+
+.oito{
+    font-family: var(--fonte-1);
+    font-size: 26px;    
+    color: #47498e;
+    position: absolute;
+    margin-left: 755px;
+    margin-top: 540px;
+}
+
+.cartas_basicas_cabecalho{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.cartas_basicas_cabecalho h1{
+    font-family: var(--fonte-1);
+    font-size: 24px;
+    color: #47498e;
+    line-height: 25px;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+/*sailors*/
+.cartas_basicas{
+    margin-top: 40px;
+    margin-left: 40px;
+    display: flex;
+}
+
+.card {
+    width: 270px;
+    height: 600px;
+    text-align: center;
+    padding: 45px;
+    border-radius: 15px 0 0 15px;
+    color: #fff3a6;
+    background: linear-gradient(175deg, #b75f00, #fcefb7, #b75f00); /* Gradiente */
+}
+
+.card h1{
+    font-family: 'TheSeasons';
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 900;
+    width: 290px;
+    color: white;
+    margin-top: 500px;
+}
+
+.card p {
+    margin-top: 10px;
+    font-family: var(--fonte-1);
+    font-size: 22px;
+    line-height: 20px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.card img {
+    width: 270px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.card_2 {
+    width: 270px;
+    height: 600px;
+    text-align: center;
+    padding: 45px;
+    color: #ffa6a6;
+    background: linear-gradient(175deg, #a4000f, black, #a4000f); /* Gradiente */
+
+}
+
+.card_2 h1{
+    font-family: 'TheSeasons';
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 900;
+    width: 290px;
+    color: white;
+    margin-top: 500px;
+}
+
+
+.card_2 p {
+    margin-top: 10px;    
+    font-family: var(--fonte-1);
+    font-size: 22px;
+    line-height: 20px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.card_2 img {
+    width: 270px;
+    border-radius: 10px;
+}
+
+.card_3 {
+    width: 270px;
+    height: 600px;
+    text-align: center;
+    padding: 45px;
+    color: #d8f0ff;
+    background: linear-gradient(175deg, #3b7ac2, #c5d5e3, #3b7ac2); /* Gradiente */
+}
+
+.card_3 h1{
+    font-family: 'TheSeasons';
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 900;
+    width: 290px;
+    color: white;
+    margin-top: 500px;
+}
+
+
+.card_3 p {
+    margin-top: 10px;    
+    font-family: var(--fonte-1);
+    font-size: 22px;
+    line-height: 20px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.card_3 img {
+    width: 270px;
+    border-radius: 10px;
+}
+
+.card_4 {
+    width: 270px;
+    height: 600px;
+    text-align: center;
+    border-radius: 0px 15px 15px 0px;
+    padding: 45px;
+    color: #a6ffc4;
+    background: linear-gradient(175deg, #51b849, #146163, #5dac81); /* Gradiente */
+}
+
+.card_4 h1{
+    font-family: 'TheSeasons';
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 900;
+    width: 290px;
+    color: white;
+    margin-top: 500px;
+}
+
+
+.card_4 p {
+    margin-top: 10px;    
+    font-family: var(--fonte-1);
+    font-size: 22px;
+    line-height: 20px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.card_4 img {
+    width: 270px;
+    border-radius: 10px;
+}
+
+.card-inner {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card_2:hover .card-inner{
+    transform: rotateY(180deg);
+}
+
+.card_3:hover .card-inner{
+    transform: rotateY(180deg);
+}
+
+.card_4:hover .card-inner{
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 15px;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}

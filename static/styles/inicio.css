@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap');
+
+:root{
+    --fonte-1: 'Darker Grotesque';
+    --fonte-2: 'Zen Antique'
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    position: relative;
+    height: 100vh;
+    display: flex;
+}
+
+.snowfall{
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    overflow: hidden;
+}
+
+.flocos{
+    --pequeno: 3px;
+    --grande: 7px;
+    width: var(--pequeno);
+    height: var(--pequeno);
+    position: absolute;
+    background-color: #b284e0;
+    border-radius: 50%;
+    animation: snow 6s linear infinite,
+               wind 10s ease-in-out infinite;
+    top: -1%;
+    opacity: 0.7;
+
+}
+
+.flocos:nth-child(2n+3){
+    width: var(--grande);
+    height: var(--grande);
+}
+
+.flocos:nth-child(1){
+    left: 25%;
+    animation-delay: 1s;
+}
+
+.flocos:nth-child(1){
+    left: 35%;
+    animation-delay: 1.5s;
+}
+
+.flocos:nth-child(2){
+    left: 50%;
+    animation-delay: 2s;
+}
+
+.flocos:nth-child(3){
+    left: 75%;
+    animation-delay: 2.5s;
+}
+
+.flocos:nth-child(4){
+    left: 85%;
+    animation-delay: 3s;
+}
+
+.flocos:nth-child(5){
+    left: 95%;
+    animation-delay: 3.5s;
+}
+
+.flocos:nth-child(6){
+    left: 100%;
+    animation-delay: 4s;
+}
+
+.flocos:nth-child(7){
+    left: 25%;
+    animation-delay: 1s;
+}
+
+.flocos:nth-child(8){
+    left: 35%;
+    animation-delay: 1.5s;
+}
+
+.flocos:nth-child(9){
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.flocos:nth-child(10){
+    left: 25%;
+    animation-delay: 2.5s;
+}
+
+.flocos:nth-child(11){
+    left: 5%;
+    animation-delay: 3s;
+}
+
+.flocos:nth-child(12){
+    left: 10%;
+    animation-delay: 3.5s;
+}
+
+.flocos:nth-child(13){
+    left: 20%;
+    animation-delay: 4s;
+}
+
+.flocos:nth-child(14){
+    left: 40%;
+    animation-delay: 5s;
+}
+
+.flocos:nth-child(15){
+    left: 65%;
+    animation-delay: 0.5s;
+}
+
+.flocos:nth-child(16){
+    left: 80%;
+    animation-delay: 2s;
+}
+
+.flocos:nth-child(17){
+    left: 30%;
+    animation-delay: 1.5s;
+}
+
+.flocos:nth-child(18){
+    left: 10%;
+    animation-delay: 3s;
+}
+
+.flocos:nth-child(19){
+    left: 20%;
+    animation-delay: 3.5s;
+}
+
+.flocos:nth-child(19){
+    left: 55%;
+    animation-delay: 0.5s;
+}
+
+@keyframes snow {
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes wind{
+
+    50%{
+        transform: translateX(120px);
+    }
+}
+
+.bloco_principal {
+    max-width: 1300px;
+    height: 600px;
+    background-color: white;
+    margin-left: 50px;
+    margin-top: 70px;
+    border-radius: 40px;
+    position: relative;
+}
+
+/* Criando a borda com gradiente */
+.bloco_principal::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: calc(100% - 50%);
+    height: calc(100% - 1%);
+    border-radius: 42px;
+    padding: 4px;
+    background: linear-gradient(135deg, #9370DB, #4B0082);
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+h1 {
+    position: relative;
+    top: 60px; /* Ajuste conforme necessário */
+    left: 160px; /* Ajuste conforme necessário */
+    font-size: 30px;
+    font-family: var(--fonte-2);
+    color: #47498e;
+}
+
+p{
+    font-size: 38px;
+    color: #47498e;
+    margin-left: 450px;
+    margin-top: 265px;
+    font-family: var(--fonte-1);
+}
+
+.sailor{
+    position: absolute;
+    left: 890px;
+    top: -60px;
+    animation: scale-up-right 2s ease-in-out;
+}
+
+@-webkit-keyframes scale-up-right {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+      -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+    }
+  }
+  @keyframes scale-up-right {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+      -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+    }
+}
+
+.estrelas{
+    position: absolute;
+    margin-left: 750px;
+    margin-top: 170px;
+    filter: drop-shadow(2px 5px 5px rgba(46, 1, 48, 0.7)); /* (deslocamento horizontal, deslocamento vertical, desfoque, cor) */
+    animation: scale-up-right 1s ease-in-out;
+}
+
+@-webkit-keyframes scale-up-right {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+      -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+    }
+  }
+  @keyframes scale-up-right {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+      -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+    }
+}
+
+.titulo_img{
+    position: absolute;
+    margin-left: 112px;
+    filter: drop-shadow(4px 4px 2px rgba(46, 1, 48, 0.4)); /* (deslocamento horizontal, deslocamento vertical, desfoque, cor) */
+    animation: slide-fwd-center 2s forwards;
+}
+
+@keyframes slide-fwd-center {
+    0% {
+        transform: translateY(-50px) scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.musica{
+    background-color: transparent;
+    border-color: transparent;
+    position: absolute;
+    margin-top: -120px;
+    margin-left: 250px;
+    transition: 0.5s ease-in-out;
+    z-index: 2;
+}
+
+.musica img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.musica img:hover {
+    cursor: pointer;
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+
+.sobre{
+    background-color: transparent;
+    border-color: transparent;
+    position: absolute;
+    margin-top: -120px;
+    margin-left: 500px;
+    transition: 0.5s ease-in-out;
+    z-index: 2;
+}
+
+/* criar forma de botao = losango eu acho */
+
+.play-button {
+    width: 120px;
+    height: 80px;
+    color: white;
+    font-size: 20px;
+    background: linear-gradient(to right, #7f7fcf, #b284e0);
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 360px;
+    top: 520px;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /*  pontas do ploigono  */
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    z-index: 2;
+}
+
+.play-button::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: 0.5s ease-in-out;
+}
+
+/*  como vai ficar na animação  */
+.play-button::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff3c3c, #ff9b4a, #fffc49, #88ff58,
+      #5effe4, #5673ff, #ff63dd, #ff5959
+    );
+    position: absolute;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height:  calc(100% + 4px);
+    filter: blur(10px);
+    animation: glowing 20s linear infinite;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+/*  animação: posição do fundo gradiente */
+@keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+  }
+  
+/* hover */
+.play-button:hover::before {
+    opacity: 1;
+}
+
+button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
