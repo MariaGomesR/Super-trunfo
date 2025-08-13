@@ -19,7 +19,7 @@ O jogo segue até que um dos jogadores conquiste todas as cartas. Algumas cartas
 </div>
 
 #### 🔗Link de acesso
->[Portfolio](https://https://super-trunfo-k4g8.onrender.com)
+>[Super Trunfo](https://super-trunfo-k4g8.onrender.com)
 
 <h3>Participações:</h3>
 
