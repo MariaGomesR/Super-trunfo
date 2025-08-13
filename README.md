@@ -18,6 +18,9 @@ O jogo segue até que um dos jogadores conquiste todas as cartas. Algumas cartas
 <img width="670" height="2348" src="https://github.com/user-attachments/assets/1057e9e7-ef0f-4693-9bf6-270197246c19" />
 </div>
 
+#### 🔗Link de acesso
+>[Portfolio](https://https://super-trunfo-k4g8.onrender.com)
+
 <h3>Participações:</h3>
 
 [Catarine Tomaz](https://github.com/tomazzcatarine)<br>
